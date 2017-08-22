@@ -17,7 +17,7 @@ zip -9 lambda.zip main.py
 
 # Zip the dependencies
 cd $VIRTUAL_ENV/lib/python3.6/site-packages/
-zip -r9 $VIRTUAL_ENV/../lambda.zip .
+zip -r9 $VIRTUAL_ENV/../lambda.zip . -i .
 cd -
 
 # Exit the virtual environment
