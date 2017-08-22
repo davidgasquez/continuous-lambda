@@ -21,4 +21,5 @@ deploy:
     access_key_id:
         secure: 2OuaGe00mxb6qiQ7OaM4sls430992fhcVYjHRtt34GguJsuQdNxNB1ujcgzIdsmlnBvgTqoBWpaQVxjZOePOp43R9RFDzcapFLxME6H0JXBKjFI+gE69ZmjKXa2B9bVaijnlfFYqfH6dByTA+UBh9yyYt+FI6E1rAc4CEiS9lTMvDqVssbRCjeIQVNKuo0wX29EwZFcfoNOjg7vAqOC7rMV4qSJQFwSOKqr0jvutL3tm9bAoFAVXrNtW/mBLCizSF5XZITQDDNuADt+fdp8ITeDxhhAFs2w3VRWOZL3VJvXoxbDDbbnnwOuz8WpH/8JfMCIZyoYYst+Vi+TtEn3lZrW3y5fJpODVAyKY9XtLzv3JVdA9i0MIXWImSj/xbqRO0gm549fQw+GRn12B6TnWwa06zQBje2tvFr8PIMG7cXOxDChqiaPNCZVRJSR4AaoQ6Cc++M6HqpiIhbnnIOt3+pAwgKVmYDAmDiwobfUM/FvMxTbyR0kt/q/IBgxFMqvZrT1wL+cf63GR12TwoUYex4ebZWRmpLOIKApSvJ/eme0soGmD9vKnVggAuLkHaz86VhczBRzfpBb098OQJ1xtPBTv5Yj5WoMrICw481R0abiA9hrEfJiQNRlQ2+nkTeMMZYVzndj9iS3pUMlbgcSmWC+l6eU9icoCGm0Q539J+oU=
     on:
-        condition: ${TRAVIS_BRANCH} = @(master|staging) 
+        branch: master
+        branch: staging
