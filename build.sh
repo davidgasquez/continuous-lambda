@@ -16,8 +16,8 @@ pip install -r requirements.txt
 zip -9 lambda.zip main.py
 
 # Zip the dependencies
-cd $VIRTUAL_ENV/lib/python3.6/site-packages/
-zip -r9 $VIRTUAL_ENV/../lambda.zip . -i .
+cd venv/lib/python3.6/site-packages/
+zip -r ../../../../lambda.zip .
 cd -
 
 # Exit the virtual environment
