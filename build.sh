@@ -9,6 +9,7 @@ if [ ! -d venv ]; then
     python3 -m venv venv
 fi
 
+deactivate || true
 source venv/bin/activate
 pip install -r requirements.txt
 
@@ -17,7 +18,7 @@ zip -9 lambda.zip main.py
 
 # Zip the dependencies
 cd venv/lib/python3.6/site-packages/
-zip -r ../../../../lambda.zip .
+zip -r9 ../../../../lambda.zip .
 cd -
 
 # Exit the virtual environment
