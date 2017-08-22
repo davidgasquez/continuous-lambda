@@ -1,5 +1,11 @@
 language: python
+
 python: 3.6
+
+env:
+    - ENVIRONMENT=staging
+    - ENVIRONMENT=production
+
 script: python main.py
 
 before_deploy:
@@ -11,7 +17,7 @@ deploy:
     module_name: "main"
     runtime: "python3.6"
     region: "us-east-1"
-    function_name: "test_lambda_travis"
+    function_name: "$ENVIRONMENT_test_lambda_travis"
     zip: lambda.zip
     role: "arn:aws:iam::578594301922:role/lambda_basic_execution"
     secret_access_key:
