@@ -11,7 +11,7 @@ fi
 
 deactivate || true
 source venv/bin/activate
-pip install -r requirements.txt
+pip install --user -r requirements.txt
 
 # Zip the lambda
 zip -9 lambda.zip main.py
