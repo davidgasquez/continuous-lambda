@@ -3,6 +3,9 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+# Lambda
+lambda.zip
+
 # C extensions
 *.so
 
