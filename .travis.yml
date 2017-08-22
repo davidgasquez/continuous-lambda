@@ -7,7 +7,8 @@ before_deploy:
 
 deploy:
     provider: lambda
-    handler_name: "main.handler"
+    handler_name: "handler"
+    module_name: "main"
     runtime: "python3.6"
     region: "us-east-1"
     function_name: "test_lambda_travis"

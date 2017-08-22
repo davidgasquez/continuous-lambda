@@ -10,6 +10,7 @@ if [ ! -d venv ]; then
 fi
 
 source venv/bin/activate
+mkdir -p lib
 pip install -r requirements.txt -t lib
 
 # Zip the lambda
