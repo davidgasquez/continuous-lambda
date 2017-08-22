@@ -1,6 +1,6 @@
 language: python
 python: 3.6
-script: python main.py"
+script: python main.py
 
 before_deploy:
     - "./build.sh"
