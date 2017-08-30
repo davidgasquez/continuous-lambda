@@ -4,7 +4,7 @@ python: 3.6
 
 script: 
     - "python main.py"
-    - "cd infrastructure/ && terraform plan"
+    - "./plan.sh"
 
 before_deploy:
     - "./build.sh"
