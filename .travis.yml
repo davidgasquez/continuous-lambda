@@ -10,10 +10,10 @@ before_install:
 
 script: 
     - "python main.py"
-    - "./plan.sh"
 
 before_deploy:
     - "./build.sh"
+    - "./plan.sh"
 
 deploy:
     provider: lambda
