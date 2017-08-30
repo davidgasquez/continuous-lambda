@@ -16,6 +16,6 @@ deploy:
     function_name: "continuous_lambda"
     zip: lambda.zip
     publish: true
-    role: "arn:aws:iam::578594301922:role/lambda_basic_execution"
+    role: "arn:aws:iam::578594301922:role/continuous_lambda_role"
     secret_access_key: $AWS_SECRET_ACCESS_KEY
     access_key_id: $AWS_ACCESS_KEY_ID
