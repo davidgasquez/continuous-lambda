@@ -1,5 +1,5 @@
 resource "aws_lambda_function" "continuous_lambda" {
-  function_name    = "continuous_lambda"
+  function_name    = "continuous_lambda_terraform"
   filename         = "../lambda.zip"
   role             = "${aws_iam_role.continuous_lambda_iam_role.arn}"
   handler          = "main.handler"
