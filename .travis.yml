@@ -2,10 +2,16 @@ language: python
 
 python: 3.6
 
-script: python main.py
+script: 
+    - "python main.py"
+    - "cd infrasructure && terraform plan"
 
 before_deploy:
     - "./build.sh"
+    - curl -fSL "https://releases.hashicorp.com/terraform/0.10.2/terraform_0.10.2_linux_amd64.zip" -o terraform.zip
+    - sudo unzip terraform.zip -d /opt/terraform
+    - sudo ln -s /opt/terraform/terraform /usr/bin/terraform
+    - rm -f terraform.zip
 
 deploy:
     provider: lambda
