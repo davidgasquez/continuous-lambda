@@ -2,11 +2,11 @@ language: python
 
 python: 3.6
 
-before_install:
-    - curl -fSL "https://releases.hashicorp.com/terraform/0.10.2/terraform_0.10.2_linux_amd64.zip" -o terraform.zip
-    - sudo unzip terraform.zip -d /opt/terraform
-    - sudo ln -s /opt/terraform/terraform /usr/bin/terraform
-    - rm -f terraform.zip
+# before_install:
+#     - curl -fSL "https://releases.hashicorp.com/terraform/0.10.2/terraform_0.10.2_linux_amd64.zip" -o terraform.zip
+#     - sudo unzip terraform.zip -d /opt/terraform
+#     - sudo ln -s /opt/terraform/terraform /usr/bin/terraform
+#     - rm -f terraform.zip
 
 script:
     - python main.py
@@ -14,7 +14,7 @@ script:
 before_deploy:
     - ./build.sh
 
-deploy:
-  provider: script
-  skip_cleanup: true
-  script: "./deploy.sh"
+# deploy:
+#   provider: script
+#   skip_cleanup: true
+#   script: "./deploy.sh"
