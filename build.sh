@@ -19,7 +19,7 @@ zip -9 lambda.zip main.py
 # Zip the dependencies
 cd lib
 zip -r9 ../lambda.zip .
-cd -
+cd ..
 
 # Exit the virtual environment
 deactivate
