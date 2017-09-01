@@ -8,22 +8,12 @@ before_install:
     - sudo ln -s /opt/terraform/terraform /usr/bin/terraform
     - rm -f terraform.zip
 
-script: 
-    - "python main.py"
+script:
+    - python main.py
 
 before_deploy:
-    - "./build.sh"
-    - "./plan.sh"
+    - ./build.sh
 
 deploy:
-    provider: lambda
-    handler_name: "handler"
-    module_name: "main"
-    runtime: "python3.6"
-    region: "us-east-1"
-    function_name: "continuous_lambda"
-    zip: lambda.zip
-    publish: true
-    role: "arn:aws:iam::578594301922:role/continuous_lambda_role"
-    secret_access_key: $AWS_SECRET_ACCESS_KEY
-    access_key_id: $AWS_ACCESS_KEY_ID
+  provider: script
+  script: deploy.sh
